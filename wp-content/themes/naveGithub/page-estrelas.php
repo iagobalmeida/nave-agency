@@ -18,11 +18,7 @@ get_header();
 <h1 class="leading">ESTRELAS</h1>
 <div class="row full">
     <div class="col">
-        <?php do_shortcode('[wpforms id="61" title="false"]') ?>
-        Isso é um teste apenas, me ignore... 
-        We’re an award-winning, purpose-driven, creative agency specializing in strategy, content creation, and social media. Our mission is to leverage the power of technology, art, and culture to create a more connected, engaging, and just world.
-        We’re an award-winning, purpose-driven, creative agency specializing in strategy, content creation, and social media. Our mission is to leverage the power of technology, art, and culture to create a more connected, engaging, and just world.
-        We’re an award-winning, purpose-driven, creative agency specializing in strategy, content creation, and social media. Our mission is to leverage the power of technology, art, and culture to create a more connected, engaging, and just world.
+    Os criadores de conteúdo são a parte mais importante da NAVE. Eles são o combustível que faz a nossa agência estar em constante movimento. Nosso trabalho tem uma atenção especial a cada um desses talentos que foram escolhidos a dedo por nossa equipe para estar aqui. Com diversas características e apostando em diversidade, o elenco da NAVE é seu ponto forte, como você pode conferir abaixo no nosso catálogo de estrelas!    
     </div>
 </div>
 <div class="row mb-0">
@@ -44,7 +40,7 @@ get_header();
                             $url_tiktok     = get_field('url_tiktok') ? get_field('url_tiktok') : '#';
                         ?>
                         <a href="<?= $url_twitch ?>" class="<?= $url_twitch == '#' ? 'disabled' : '' ?>">
-                            <?= file_get_contents(get_template_directory_uri().'/assets/icons/discord-b.svg'); ?>
+                            <?= file_get_contents(get_template_directory_uri().'/assets/icons/twitch-b.svg'); ?>
                         </a>
                         <a href="<?= $url_discord ?>" class="<?= $url_discord == '#' ? 'disabled' : '' ?>">
                             <?= file_get_contents(get_template_directory_uri().'/assets/icons/discord-b.svg'); ?>

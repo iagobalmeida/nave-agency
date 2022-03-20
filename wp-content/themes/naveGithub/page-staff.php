@@ -19,9 +19,7 @@ get_header();
 <h1 class="leading">STAFF</h1>
 <div class="row full">
     <div class="col">
-        We’re an award-winning, purpose-driven, creative agency specializing in strategy, content creation, and social media. Our mission is to leverage the power of technology, art, and culture to create a more connected, engaging, and just world.
-        We’re an award-winning, purpose-driven, creative agency specializing in strategy, content creation, and social media. Our mission is to leverage the power of technology, art, and culture to create a more connected, engaging, and just world.
-        We’re an award-winning, purpose-driven, creative agency specializing in strategy, content creation, and social media. Our mission is to leverage the power of technology, art, and culture to create a more connected, engaging, and just world.
+        A NAVE conta com uma tripulação dedicada e atenta ao mercado, visando sempre o crescimento e focada em descobrir e dar voz a novos talentos do mercado de entretenimento para o público gamer. Confira abaixo quem são as pessoas que fazem a NAVE estar sempre na órbita perfeita.
     </div>
 </div>
 <div class="row mb-0">
@@ -44,7 +42,7 @@ get_header();
                             $url_tiktok     = get_field('url_tiktok') ? get_field('url_tiktok') : '#';
                         ?>
                         <a href="<?= $url_twitch ?>" class="<?= $url_twitch == '#' ? 'disabled' : '' ?>">
-                            <?= file_get_contents(get_template_directory_uri().'/assets/icons/discord-b.svg'); ?>
+                            <?= file_get_contents(get_template_directory_uri().'/assets/icons/twitch-b.svg'); ?>
                         </a>
                         <a href="<?= $url_discord ?>" class="<?= $url_discord == '#' ? 'disabled' : '' ?>">
                             <?= file_get_contents(get_template_directory_uri().'/assets/icons/discord-b.svg'); ?>
