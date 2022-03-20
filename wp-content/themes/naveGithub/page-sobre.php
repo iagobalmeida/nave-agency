@@ -81,7 +81,7 @@ get_header();
     </div>
 </div>
 <div class="partners-wrapper">
-    <?php if($streamerList->have_posts()): while($streamerList->have_posts()): $streamerList->the_post(); ?>
+    <?php if($parceirosList->have_posts()): while($parceirosList->have_posts()): $parceirosList->the_post(); ?>
         <a url="<?= get_field('url') ? get_field('url') : '#' ?>">
             <img src="<?= get_field('imagem') ?>" class="partner">
         </a>
