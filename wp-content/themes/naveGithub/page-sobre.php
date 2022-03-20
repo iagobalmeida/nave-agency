@@ -83,7 +83,7 @@ get_header();
 <div class="partners-wrapper">
     <?php if($parceirosList->have_posts()): while($parceirosList->have_posts()): $parceirosList->the_post(); ?>
         <a url="<?= get_field('url') ? get_field('url') : '#' ?>">
-            <img src="<?= get_field('imagem') ?>" class="partner">
+            <img src="<?= get_field('imagem')['url'] ?>" class="partner">
         </a>
     <?php endwhile; endif; ?>
     <img src="<?=get_template_directory_uri();?>/assets/imgs/NAVE-branco.svg" alt="" class="partner">
