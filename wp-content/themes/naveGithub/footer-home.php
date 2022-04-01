@@ -13,9 +13,9 @@
 
 ?>
     
-<?php include get_template_directory().'/contact-form.php'; ?>  
     </main>
     
+    <?php include get_template_directory().'/contact-form.php'; ?>  
     <nav class="fullscreen">
         <a class="item" href="<?=get_permalink(get_page_by_title( 'Estrelas' ))?>">
           <span>ESTRELAS</span>
@@ -40,11 +40,13 @@
 document.addEventListener("DOMContentLoaded", function(e) {
 
   try {
-    const contactToggle = document.querySelector('#contact_toggle');
     const contactForm = document.querySelector('.contact-wrapper');
     const contactClose = document.querySelector('.contact-wrapper .close');
-    contactToggle.addEventListener('click', (e) => {
-      contactForm.classList.toggle('active');
+    const contactToggles = [...document.querySelectorAll('#contact_toggle')];
+    contactToggles.forEach(toggle => {
+      toggle.addEventListener('click', (e) => {
+        contactForm.classList.toggle('active');
+      })
     });
     contactClose.addEventListener('click', (e) => {
       contactForm.classList.toggle('active');

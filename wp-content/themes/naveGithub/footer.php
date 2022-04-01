@@ -43,12 +43,16 @@ document.addEventListener("DOMContentLoaded", function(e) {
     console.log(error.message);
   }
 
+
+
   try {
-    const contactToggle = document.querySelector('#contact_toggle');
     const contactForm = document.querySelector('.contact-wrapper');
     const contactClose = document.querySelector('.contact-wrapper .close');
-    contactToggle.addEventListener('click', (e) => {
-      contactForm.classList.toggle('active');
+    const contactToggles = [...document.querySelectorAll('#contact_toggle')];
+    contactToggles.forEach(toggle => {
+      toggle.addEventListener('click', (e) => {
+        contactForm.classList.toggle('active');
+      })
     });
     contactClose.addEventListener('click', (e) => {
       contactForm.classList.toggle('active');

@@ -437,7 +437,7 @@ nav {
   display: flex;
   align-items: center;
   flex-direction: row;
-  z-index: 2;
+  z-index: 99;
 }
 
 nav a {
@@ -534,19 +534,19 @@ nav.fullscreen {
   text-align: center;
 }
 
-.contact-wrapper .contact-form .input-wrapper {
+.contact-wrapper .contact-form .input-wrapper, .contact-wrapper .contact-form .wpforms-field {
   display: flex;
   flex-direction: column;
 }
 
-.contact-wrapper .contact-form .input-wrapper label {
+.contact-wrapper .contact-form .input-wrapper label, .contact-wrapper .contact-form .wpforms-field label {
   color: white;
   font-weight: bold;
   margin-bottom: 15px;
   font-size: 20px;
 }
 
-.contact-wrapper .contact-form .input-wrapper input {
+.contact-wrapper .contact-form .input-wrapper input, .contact-wrapper .contact-form .wpforms-field input {
   background-color: transparent;
   border: 2px solid white;
   margin-bottom: 30px;
@@ -555,7 +555,7 @@ nav.fullscreen {
   padding: 10px;
 }
 
-.contact-wrapper .contact-form .input-wrapper textarea {
+.contact-wrapper .contact-form .input-wrapper textarea, .contact-wrapper .contact-form .wpforms-field textarea {
   background-color: transparent;
   border: 2px solid white;
   margin-bottom: 30px;
@@ -565,7 +565,7 @@ nav.fullscreen {
   padding: 10px;
 }
 
-.contact-wrapper .contact-form .input-wrapper button {
+.contact-wrapper .contact-form .input-wrapper button, .contact-wrapper .contact-form .wpforms-submit-container button {
   padding: 10px;
   background: white;
   color: black;
@@ -574,7 +574,7 @@ nav.fullscreen {
   border: none;
 }
 
-.contact-wrapper .contact-form .input-wrapper button:active {
+.contact-wrapper .contact-form .input-wrapper button:active, .contact-wrapper .contact-form .wpforms-submit-container button:active {
   border: none;
   outline: none;
   background-color: #ddd;

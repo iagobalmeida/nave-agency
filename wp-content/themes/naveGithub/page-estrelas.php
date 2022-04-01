@@ -21,9 +21,9 @@ get_header();
     Os criadores de conteúdo são a parte mais importante da NAVE. Eles são o combustível que faz a nossa agência estar em constante movimento. Nosso trabalho tem uma atenção especial a cada um desses talentos que foram escolhidos a dedo por nossa equipe para estar aqui. Com diversas características e apostando em diversidade, o elenco da NAVE é seu ponto forte, como você pode conferir abaixo no nosso catálogo de estrelas!    
     </div>
 </div>
-<div class="row mb-0">
+<div class="row mb-0" id="streamers_row">
     <?php if($streamerList->have_posts()): while($streamerList->have_posts()): $streamerList->the_post(); ?>
-        <div class="col-card mb-60">
+        <div class="col-card mb-60" style="opacity: 0; transition: all 250ms ease-in-out">
             <div class="img-wrapper">
                 <div class="img-text">
                     <div class="text">
@@ -62,7 +62,7 @@ get_header();
                         </a>
                     </div>
                 </div>
-                <img src="<?= get_field('imagem') ?>">
+                <img data-load="<?= get_field('imagem') ?>">
             </div>
             <div class="title-wrapper">
                 <div class="text">
@@ -79,6 +79,25 @@ get_header();
     <?php endif; ?>
 
 </div>
+
+<script>
+
+    function loadEstrelasImage(){
+        let cards = [...document.querySelectorAll('.col-card')];
+        cards.forEach(card => {
+            let img = card.querySelector('img');
+            let src = img.getAttribute('data-load');
+            img.addEventListener('load', () => {
+                card.style.opacity = 1;
+            })
+            img.setAttribute('src', src);
+        });
+    }
+    setTimeout(() => {
+        loadEstrelasImage();
+    }, 2000);
+    
+</script>
 
 <?php
 get_footer();
