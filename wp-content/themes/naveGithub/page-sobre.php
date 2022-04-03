@@ -62,7 +62,7 @@ get_header();
                 <?= file_get_contents(get_template_directory_uri().'/assets/icons/minus-w.svg'); ?>
             </span>
             <span class="retro-card-button rotate">
-                <?= file_get_contents(get_template_directory_uri().'/assets/icons/plus-w.svg'); ?>
+                <?= file_get_contents(get_template_directory_uri().'/assets/icons/square-w.svg'); ?>
             </span>
             <span class="retro-card-button rotate">
                 <?= file_get_contents(get_template_directory_uri().'/assets/icons/plus-w.svg'); ?>
@@ -82,16 +82,11 @@ get_header();
 </div>
 <div class="partners-wrapper">
     <?php if($parceirosList->have_posts()): while($parceirosList->have_posts()): $parceirosList->the_post(); ?>
-        <a href="<?= get_field('url') ? get_field('url') : '#' ?>" class="partner">
+        <a target="_blank" href="<?= get_field('url') ? get_field('url') : '#' ?>" class="partner">
             <img src="<?= get_field('imagem')['url'] ?>" class="partner">
         </a>
     <?php endwhile; endif; ?>
 </div>
-<pre>
-<?php
-
-?>
-</pre>
 
 <?php
 get_footer();

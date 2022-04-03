@@ -383,6 +383,7 @@ main .retro-cards-wrapper .retro-card {
   box-shadow: 0px 0px 10px #000000aa;
   overflow: hidden;
   transition: all 250ms ease-in-out;
+  cursor: pointer;
 }
 
 .retro-card:hover {
