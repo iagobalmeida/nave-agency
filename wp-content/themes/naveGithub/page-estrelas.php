@@ -25,7 +25,7 @@ get_header();
         twitter: `<?= file_get_contents(get_template_directory_uri().'/assets/icons/twitter-b.svg'); ?>`,
         instagram: `<?= file_get_contents(get_template_directory_uri().'/assets/icons/insta-b.svg'); ?>`,
         youtube: `<?= file_get_contents(get_template_directory_uri().'/assets/icons/youtube-b.svg'); ?>`,
-        facebook: `<?= file_get_contents(get_template_directory_uri().'/assets/icons/facebook-b.svg'); ?>`,
+        facebook: `<?= file_get_contents(get_template_directory_uri().'/assets/icons/face-b.svg'); ?>`,
         tiktok: `<?= file_get_contents(get_template_directory_uri().'/assets/icons/tiktok-b.svg'); ?>`,
     };
 
