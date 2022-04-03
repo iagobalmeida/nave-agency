@@ -16,7 +16,8 @@ if(isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['mensagem']))
   $mensagem = $_POST['mensagem'];
   
   if($nome != '' && $email != '' && $mensagem != '') {
-      $to = get_option('admin_email');
+
+      $to = 'formulario@nave.agency';//get_option('admin_email');
       $subject = "Someone sent a message from ".get_bloginfo('name');
       $headers = 'From: '. $email . "\r\n" .
         'Reply-To: ' . $email . "\r\n";
