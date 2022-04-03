@@ -45,8 +45,6 @@ get_header();
         socialIcons += (streamer.url_tiktok) ? `<a href=${streamer.url_tiktok}>${svgs.tiktok}</a>` : '';
 
         let div = document.createElement('div');
-        div.style.opacity = 0;
-        div.style.transision = 'all 250ms ease-in-out';
         div.className = 'col-card mb-60';
         div.innerHTML = `
         <div class="img-wrapper">
@@ -79,30 +77,19 @@ get_header();
 
         let divs = result.map(streamer => (createStreamerCard(streamer)));
 
+        let timeout = 150;
         let row = document.getElementById('streamers_row');
         row.innerHTML = '';
         row.className = 'row mb-0';
-        result.forEach(streamer => {
+        result.filter(streamer => (streamer.status == 'publish')).forEach(streamer => {
             let card = createStreamerCard(streamer);
             row.appendChild(card);
-            card.style.opacity = 1;
+            setTimeout(() => {
+                card.style.opacity = 1;
+            }, timeout);
+            timeout += 150;
         })
     }
-
-
-    const loadEstrelasImage = () => {
-        let cards = [...document.querySelectorAll('.col-card')];
-        cards.forEach(card => {
-            let img = card.querySelector('img');
-            let src = img.getAttribute('data-load');
-            img.addEventListener('load', () => {
-                card.style.opacity = 1;
-            })
-            img.setAttribute('src', src);
-        });
-    }
-
-    loadEstrelasImage();
 
     fetchStreamers();
     

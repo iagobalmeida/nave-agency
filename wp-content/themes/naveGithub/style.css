@@ -238,6 +238,8 @@ main div.row .col-text {
 
 main div.row .col-card {
   cursor: pointer;
+  transition: 250ms ease-in-out;
+  opacity: 0;
 }
 
 main div.row .col-card.active .vertical-line {
