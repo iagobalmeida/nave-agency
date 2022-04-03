@@ -4,13 +4,6 @@
 	 viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#FFFFFF;}
-	.vertical-line {
-		transform-origin: center;
-		transition: 250ms ease-in-out;
-	}
-	.vertical-line.active {
-		transform: rotate(90deg);
-	}
 </style>
 <path class="st0 vertical-line" d="M284.31,469.12h-69.09c-4.24,0-7.68-3.44-7.68-7.68V37.68c0-4.24,3.44-7.68,7.68-7.68h69.09
 	c4.24,0,7.68,3.44,7.68,7.68v423.77C291.99,465.68,288.56,469.12,284.31,469.12z"/>

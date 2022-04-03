@@ -240,6 +240,16 @@ main div.row .col-card {
   cursor: pointer;
 }
 
+main div.row .col-card.active .vertical-line {
+  transform: rotate(90deg);
+}
+
+
+.vertical-line {
+  transform-origin: center;
+  transition: 250ms ease-in-out;
+}
+
 main div.row .col-card .img-wrapper {
   position: relative;
   width:    100%; /* desired width */
@@ -260,6 +270,10 @@ main div.row .col-card .img-wrapper .img-text {
   transition: 250ms ease-in-out;
   display: grid;
   grid-template-rows: 87% 13%;
+}
+
+main div.row .col-card.active .img-wrapper .img-text {
+  top: 0;
 }
 
 main div.row .col-card .img-wrapper .img-text.active {
