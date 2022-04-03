@@ -13,7 +13,8 @@ get_header();
     Os criadores de conteúdo são a parte mais importante da NAVE. Eles são o combustível que faz a nossa agência estar em constante movimento. Nosso trabalho tem uma atenção especial a cada um desses talentos que foram escolhidos a dedo por nossa equipe para estar aqui. Com diversas características e apostando em diversidade, o elenco da NAVE é seu ponto forte, como você pode conferir abaixo no nosso catálogo de estrelas!    
     </div>
 </div>
-<div class="row mb-0" id="streamers_row">
+<div id="streamers_row">
+    <h5 style="text-align:center">Carregando...</h5>
 </div>
 
 <script>
@@ -73,12 +74,14 @@ get_header();
 
     const fetchStreamers = async () => {
         let url = `<?= get_rest_url(); ?>`;
-        let request = await fetch(`${url}wp/v2/streamer`);
+        let request = await fetch(`${url}wp/v2/streamer?per_page=100&meta_key=ordem&order_by=meta_value&order=asc`);
         let result = await request.json();
 
         let divs = result.map(streamer => (createStreamerCard(streamer)));
 
         let row = document.getElementById('streamers_row');
+        row.innerHTML = '';
+        row.className = 'row mb-0';
         result.forEach(streamer => {
             let card = createStreamerCard(streamer);
             row.appendChild(card);

@@ -12,7 +12,7 @@ if(isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['mensagem']))
         $headers = 'From: '. $email . "\r\n" .
           'Reply-To: ' . $email . "\r\n";
         $sent = wp_mail($to, $subject, strip_tags($mensagem), $headers);
-
+        var_dump($sent);
         $ret = array('result' => ($sent ? 'success' : 'fail'));
         header("Content-Type: application/json");
         echo json_encode($ret);
