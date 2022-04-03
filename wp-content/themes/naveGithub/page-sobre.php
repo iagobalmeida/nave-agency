@@ -44,8 +44,8 @@ get_header();
             <span class="retro-card-button">
                 <?= file_get_contents(get_template_directory_uri().'/assets/icons/minus-w.svg'); ?>
             </span>
-            <span class="retro-card-button rotate">
-                <?= file_get_contents(get_template_directory_uri().'/assets/icons/plus-w.svg'); ?>
+            <span class="retro-card-button">
+                <?= file_get_contents(get_template_directory_uri().'/assets/icons/square-w.svg'); ?>
             </span>
             <span class="retro-card-button rotate">
                 <?= file_get_contents(get_template_directory_uri().'/assets/icons/plus-w.svg'); ?>
@@ -61,7 +61,7 @@ get_header();
             <span class="retro-card-button">
                 <?= file_get_contents(get_template_directory_uri().'/assets/icons/minus-w.svg'); ?>
             </span>
-            <span class="retro-card-button rotate">
+            <span class="retro-card-button">
                 <?= file_get_contents(get_template_directory_uri().'/assets/icons/square-w.svg'); ?>
             </span>
             <span class="retro-card-button rotate">
