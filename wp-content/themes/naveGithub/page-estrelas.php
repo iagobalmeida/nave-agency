@@ -23,7 +23,7 @@ get_header();
         twitch: `<?= file_get_contents(get_template_directory_uri().'/assets/icons/twitch-b.svg'); ?>`,
         discord: `<?= file_get_contents(get_template_directory_uri().'/assets/icons/discord-b.svg'); ?>`,
         twitter: `<?= file_get_contents(get_template_directory_uri().'/assets/icons/twitter-b.svg'); ?>`,
-        instagram: `<?= file_get_contents(get_template_directory_uri().'/assets/icons/instagram-b.svg'); ?>`,
+        instagram: `<?= file_get_contents(get_template_directory_uri().'/assets/icons/insta-b.svg'); ?>`,
         youtube: `<?= file_get_contents(get_template_directory_uri().'/assets/icons/youtube-b.svg'); ?>`,
         facebook: `<?= file_get_contents(get_template_directory_uri().'/assets/icons/facebook-b.svg'); ?>`,
         tiktok: `<?= file_get_contents(get_template_directory_uri().'/assets/icons/tiktok-b.svg'); ?>`,

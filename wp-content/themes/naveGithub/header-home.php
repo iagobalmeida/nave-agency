@@ -9,6 +9,31 @@
  * @since Twenty Twenty 1.0
  */
 
+if(isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['mensagem'])) {
+
+  $nome = $_POST['nome'];
+  $email = $_POST['email'];
+  $mensagem = $_POST['mensagem'];
+  
+  if($nome != '' && $email != '' && $mensagem != '') {
+      $to = get_option('admin_email');
+      $subject = "Someone sent a message from ".get_bloginfo('name');
+      $headers = 'From: '. $email . "\r\n" .
+        'Reply-To: ' . $email . "\r\n";
+      $sent = wp_mail($to, $subject, strip_tags($mensagem), $headers);
+      var_dump($sent);
+      $ret = array('result' => ($sent ? 'success' : 'fail'));
+      header("Content-Type: application/json");
+      echo json_encode($ret);
+      exit(200);
+  }else {
+      $ret = array('result' => 'fail', 'fields' => array('nome' => $nome, 'email' => $email, 'mensagem' => $mensagem));
+      header("Content-Type: application/json");
+      echo json_encode($ret);
+      exit(500);
+  }
+}
+
 ?><!DOCTYPE html><!DOCTYPE html>
 <html <?php language_attributes(); ?> >
   <head>
