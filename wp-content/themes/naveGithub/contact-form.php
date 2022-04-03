@@ -22,23 +22,17 @@
         </div>
     </form>
     <div class="contact-link">
-        <a href="#">
-            <?= file_get_contents(get_template_directory_uri() . '/assets/icons/discord-w.svg'); ?>
-        </a>
-        <a href="#">
+        <a href="https://twitter.com/NAVEagc" target="_blank">
             <?= file_get_contents(get_template_directory_uri() . '/assets/icons/twitter-w.svg'); ?>
         </a>
-        <a href="#">
+        <a href="https://www.instagram.com/naveagc/" target="_blank">
             <?= file_get_contents(get_template_directory_uri() . '/assets/icons/insta-w.svg'); ?>
         </a>
-        <a href="#">
-            <?= file_get_contents(get_template_directory_uri() . '/assets/icons/yt-w.svg'); ?>
-        </a>
-        <a href="#">
+        <a href="https://www.facebook.com/agencynave" target="_blank">
             <?= file_get_contents(get_template_directory_uri() . '/assets/icons/face-w.svg'); ?>
         </a>
-        <a href="#">
-            <?= file_get_contents(get_template_directory_uri() . '/assets/icons/link-w.svg'); ?>
+        <a href="https://www.twitch.tv/naveagency" target="_blank">
+            <?= file_get_contents(get_template_directory_uri() . '/assets/icons/twitch-w.svg'); ?>
         </a>
     </div>
 </div>
