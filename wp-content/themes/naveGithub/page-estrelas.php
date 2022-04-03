@@ -24,7 +24,7 @@ get_header();
         discord: `<?= file_get_contents(get_template_directory_uri().'/assets/icons/discord-b.svg'); ?>`,
         twitter: `<?= file_get_contents(get_template_directory_uri().'/assets/icons/twitter-b.svg'); ?>`,
         instagram: `<?= file_get_contents(get_template_directory_uri().'/assets/icons/insta-b.svg'); ?>`,
-        youtube: `<?= file_get_contents(get_template_directory_uri().'/assets/icons/youtube-b.svg'); ?>`,
+        youtube: `<?= file_get_contents(get_template_directory_uri().'/assets/icons/yt-b.svg'); ?>`,
         facebook: `<?= file_get_contents(get_template_directory_uri().'/assets/icons/face-b.svg'); ?>`,
         tiktok: `<?= file_get_contents(get_template_directory_uri().'/assets/icons/tiktok-b.svg'); ?>`,
     };
@@ -36,13 +36,13 @@ get_header();
         let imgSrc = streamer.imagem;
         
         let socialIcons = '';
-        socialIcons += (streamer.url_twitch) ? `<a href=${streamer.url_twitch}>${svgs.twitch}</a>` : '';
-        socialIcons += (streamer.url_discord) ? `<a href=${streamer.url_discord}>${svgs.discord}</a>` : '';
-        socialIcons += (streamer.url_twitter) ? `<a href=${streamer.url_twitter}>${svgs.twitter}</a>` : '';
-        socialIcons += (streamer.url_instagram) ? `<a href=${streamer.url_instagram}>${svgs.instagram}</a>` : '';
-        socialIcons += (streamer.url_youtube) ? `<a href=${streamer.url_youtube}>${svgs.youtube}</a>` : '';
-        socialIcons += (streamer.url_facebook) ? `<a href=${streamer.url_facebook}>${svgs.facebook}</a>` : '';
-        socialIcons += (streamer.url_tiktok) ? `<a href=${streamer.url_tiktok}>${svgs.tiktok}</a>` : '';
+        socialIcons += (streamer.url_twitch) ? `<a tagert="_blank" href=${streamer.url_twitch}>${svgs.twitch}</a>` : '';
+        socialIcons += (streamer.url_discord) ? `<a tagert="_blank" href=${streamer.url_discord}>${svgs.discord}</a>` : '';
+        socialIcons += (streamer.url_twitter) ? `<a tagert="_blank" href=${streamer.url_twitter}>${svgs.twitter}</a>` : '';
+        socialIcons += (streamer.url_instagram) ? `<a tagert="_blank" href=${streamer.url_instagram}>${svgs.instagram}</a>` : '';
+        socialIcons += (streamer.url_youtube) ? `<a tagert="_blank" href=${streamer.url_youtube}>${svgs.youtube}</a>` : '';
+        socialIcons += (streamer.url_facebook) ? `<a tagert="_blank" href=${streamer.url_facebook}>${svgs.facebook}</a>` : '';
+        socialIcons += (streamer.url_tiktok) ? `<a tagert="_blank" href=${streamer.url_tiktok}>${svgs.tiktok}</a>` : '';
 
         let div = document.createElement('div');
         div.className = 'col-card mb-60';

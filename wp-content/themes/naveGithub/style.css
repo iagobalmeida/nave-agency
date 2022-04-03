@@ -297,7 +297,7 @@ main div.row .col-card .img-wrapper .img-text .social-icons {
   transition: all 250ms ease-in-out;
 }
 
-main div.row .col-card .img-wrapper .img-text.active .social-icons {
+main div.row .col-card.active .img-wrapper .img-text .social-icons {
   opacity: 1;
 }
 
