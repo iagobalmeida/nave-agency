@@ -67,6 +67,16 @@ get_header();
             div.classList.toggle('active');
         });
 
+        let img = div.querySelector('img');
+        if(img) {
+            img.addEventListener('load', () => {
+                div.style.opacity = 1;
+            });
+            img.addEventListener('error', () => {
+                div.remove();
+            });
+        }
+
         return div;
     }
 
@@ -84,9 +94,6 @@ get_header();
         result.filter(streamer => (streamer.status == 'publish')).forEach(streamer => {
             let card = createStreamerCard(streamer);
             row.appendChild(card);
-            setTimeout(() => {
-                card.style.opacity = 1;
-            }, timeout);
             timeout += 150;
         })
     }
