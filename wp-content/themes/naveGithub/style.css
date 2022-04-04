@@ -531,7 +531,7 @@ nav.fullscreen {
   right: 0;
   background: #000000e0;
   transition: 250ms ease-in-out;
-  z-index: 2;
+  z-index: 999;
 }
 
 .contact-wrapper.active {
