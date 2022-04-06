@@ -47,7 +47,8 @@ if(isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['mensagem']))
       <title>NAVE Agency</title>
       
       <link href="style.css" rel="stylesheet" type="text/css" />
-      
+      <link rel="icon" type="image/x-icon" href="<?=get_template_directory_uri();?>/assets/imgs/favicon.ico">
+
       <!-- Fonts -->
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

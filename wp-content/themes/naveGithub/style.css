@@ -239,6 +239,9 @@ main div.row .col-text {
 main div.row .col-card {
   cursor: pointer;
   transition: 250ms ease-in-out;
+}
+
+main div.row .col-card:not(.staff) {
   opacity: 0;
 }
 

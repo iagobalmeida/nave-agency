@@ -24,7 +24,7 @@ get_header();
 </div>
 <div class="row mb-0">
     <?php if($staffList->have_posts()): while($staffList->have_posts()): $staffList->the_post(); ?>
-        <div class="col-card mb-60">
+        <div class="col-card mb-60 staff">
             <div class="img-wrapper">
                 <div class="img-text">
                     <div class="text">
