@@ -309,7 +309,8 @@ main div.row .col-card.active .img-wrapper .img-text .social-icons {
 
 main div.row .col-card .img-wrapper .img-text .text {
   padding: 10px;
-  word-break: break-all;
+  word-break: keep-all;
+  text-align: justify;
   overflow-x: auto;
 }
 
@@ -773,4 +774,9 @@ input:focus, input:active, textarea:focus, textarea:active {
 
 .mb-60 {
   margin-bottom: 60px;
+}
+
+.col {
+  word-break: keep-all;
+  text-align: justify;
 }
