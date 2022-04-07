@@ -202,10 +202,6 @@ main {
   padding-bottom: 0px;
 }
 
-main::-webkit-scrollbar {
-  display: none;
-}
-
 main h1.leading {
   font-size: 130px;
   font-weight: bold;
@@ -779,4 +775,30 @@ input:focus, input:active, textarea:focus, textarea:active {
 .col {
   word-break: keep-all;
   text-align: justify;
+}
+
+/* Scrollbar */
+.text::-webkit-scrollbar {
+  display: none;
+}
+
+/* width */
+main::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+main::-webkit-scrollbar-track {
+  background: #000000aa;
+}
+
+/* Handle */
+main::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 15px;
+}
+
+/* Handle on hover */
+main::-webkit-scrollbar-thumb:hover {
+  background: #ddd;
 }
