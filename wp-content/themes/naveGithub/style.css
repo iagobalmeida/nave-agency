@@ -200,6 +200,7 @@ main {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
   padding-bottom: 0px;
+  overflow-x: hidden;
 }
 
 main h1.leading {
