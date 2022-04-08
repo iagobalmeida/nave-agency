@@ -56,7 +56,7 @@ get_header();
         </div>
         <div class="title-wrapper">
             <div class="text">
-                <h3 class="title">${streamer.ordem} - ${title}</h3>
+                <h3 class="title">${title}</h3>
                 <h5 class="subtitle">${subtitle}</h5>
             </div>
             <span class="svg-plus">${svgs.plus}</span>
@@ -96,7 +96,6 @@ get_header();
             if(b.ordem && !a.ordem) { return 1 }
             return a.ordem - b.ordem;
         }).filter(streamer => (streamer.status == 'publish')).forEach(streamer => {
-            console.log(`Streamer ${streamer.id}: ${streamer.title.rendered} - ${streamer.ordem}`)
             row.appendChild(createStreamerCard(streamer));
         })
     }
